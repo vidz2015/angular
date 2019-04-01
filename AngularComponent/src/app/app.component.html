@@ -1,4 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <h2 style="color:blue">Employees</h2>
-<ul></ul>
->
+<ul>
+  <li
+    *ngFor="let emp of employees"
+    [class.selected]="emp === selectedEmployee"
+    (click)="onSelect(emp)"
+  >
+    <span style="color:blue">{{ emp.name }}</span>
+  </li>
+</ul>
+<app-employee-details [employee]="selectedEmployee"></app-employee-details>

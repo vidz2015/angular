@@ -15,12 +15,13 @@ export class AppComponent {
 
   getEmployees() {
     return [
-      new Employee(1, 'tinku', 30000),
-      new Employee(2, 'Punku', 50000),
-      new Employee(3, 'chikki', 40000)
+      new Employee(1, 'Akshay', 30000),
+      new Employee(2, 'Rob', 50000),
+      new Employee(3, 'Shekhar', 40000)
     ];
   }
-  OnInit(): void {
+  // tslint:disable-next-line:use-life-cycle-interface
+  ngOnInit(): void {
     this.employees = this.getEmployees();
   }
   onSelect(emp: Employee): void {
